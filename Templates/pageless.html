@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Application</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header id="heading"></header>
+    <main>
+        <script src="/static/js/shrinkheader.js"></script>
+        <section id="home">
+            {{ content.home | safe }}
+        </section>
+        <section id="projects">
+            <!-- <h2>Projects</h2> -->
+            {{ content.projects | safe }}
+        </section>
+        <section id="connect">
+            {{ content.connect | safe }}
+        </section>
+        <section id="login">
+            {{ content.login | safe }}
+        </section>
+        <section id="about">
+            {{ content.about | safe }}
+        </section>
+    </main>
+    <script src="/static/js/heading.js"></script>
+    <script src="/static/js/smooth_scroll.js"></script>
+    
+</body>
+</html>

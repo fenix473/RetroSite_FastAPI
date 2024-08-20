@@ -1,0 +1,304 @@
+/* 
+Neon Purple
+Hex: #8A2BE2
+RGB: rgb(138, 43, 226)
+
+Electric Cyan
+Hex: #00FFFF
+RGB: rgb(0, 255, 255)
+
+Midnight Black
+Hex: #101820
+RGB: rgb(16, 24, 32)
+
+Chrome Silver
+Hex: #C0C0C0
+RGB: rgba(192, 192, 192)
+
+Electric Yellow
+Hex: #FFFF33
+RGB: rgb(255, 255, 51)
+
+Orange
+Hex: #FF5F1F
+RGB: rgb(255, 95, 31)
+*/
+
+/* FONTS */
+
+@font-face{
+    font-family: Audiowide;
+    src:url(Audiowide-Regular.ttf);
+    color: #C0C0C0;
+}
+
+
+@font-face{
+    font-family: RussoOne;
+    src:url(RussoOne-Regular.ttf);
+    color: #C0C0C0;
+}
+
+
+@font-face{
+    font-family: Orbitron;
+    src:url(Orbitron-VariableFont_wght.ttf);
+    color: #C0C0C0;
+}
+
+
+
+/* GLOBAL SETTINGS */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* TOPBAR */
+
+.top-bar {
+    position: fixed;  
+    top: 0;           
+    left: 0;          
+    right: 0;         
+    z-index: 1000;    
+    background-color: #101820;
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    border: 0.25vw solid #FF5F1F;
+    overflow: hidden;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.top-bar.shrink {
+    height: 5vh;
+}
+
+/* DROPDOWN MENU */
+/* 
+.dropdown button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #101820;
+    font-family: 'RussoOne';
+    color: #C0C0C0;
+    border-right: 0.25vw solid #FF5F1F;
+    border-bottom: 0.25vw solid #FF5F1F;
+    cursor: pointer;
+    width: 20vw;
+    height: 10vh;
+    font-size: 4vmin;
+}
+
+.dropdown a{
+    display: flex;     
+    justify-content: center;
+    align-items: center;
+    font-family: 'RussoOne';
+    color: #C0C0C0;
+    text-decoration: none;
+    border-bottom: 0.25vw solid #FF5F1F;
+    border-left: 0.25vw solid #FF5F1F;
+    width: 100%;
+    padding: 8.5vh;
+    font-size: 4vmin;
+}
+
+.dropdown .content{
+    display: none;
+    color: #C0C0C0;
+    background-color: #101820;
+    position: absolute;
+    width: 20vw;
+    border: 0.25vw solid #FF5F1F;
+    border-top: none;
+    top: 10vh;
+    box-sizing:content-box;
+    left: -0.25vw;     
+}
+
+.dropdown:hover {
+    display: block;
+} */
+
+/* LOGO BOX */
+
+.LAB473 {
+    display: flex;    
+    justify-content: center;
+    align-items: center;       
+    background-color: #8A2BE2;
+    color: #C0C0C0;
+    border: 0.4vh solid #C0C0C0;
+    width: 10vw;
+    height: 5vh;
+    border-radius: 1vmin;
+    transition: all 0.3s ease;
+    /* margin: auto 2.5vw auto auto; */
+}
+
+.LAB473.shrink {
+    width: 8vw; /* Smaller width when shrunk */
+    height: 4vh;
+}
+
+.LAB473 h2 {
+    font-family: 'Audiowide';
+    font-size: 2vmin;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.LAB473.shrink h2 {
+    font-size: 1.5vmin;
+}
+
+/* Our background! */
+
+body {
+    background-image: url(back_v3.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0px;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow-x: hidden;
+    padding-top: 10vh;
+    /* overflow: hidden */
+}
+
+/* Project page */
+
+
+
+.yellow-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10vw;
+    align-items: center;
+    height: 80vh;
+    width: 100vw;
+}
+
+.yellow-container a{
+    color: #C0C0C0;
+    text-decoration: none;
+    font-family: 'Audiowide';
+    align-self: center;
+}
+
+.yellow-box {
+    display: flex;
+    flex-direction: column;           
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Audiowide';
+    color: #C0C0C0;
+    background-color: rgba(16, 24, 32, 0.85);
+    border: 1vh solid rgba(255, 255, 51);
+    margin: 10px 0;
+    width: 20vw;
+    height: 50vh;
+    
+}
+
+/* Here goes login page styling */
+
+
+
+.login-block{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.fields{
+    display: block;
+}
+
+.fields form{
+    color: #C0C0C0;
+    background-color: #101820;
+    margin: 0.5vh;
+    width: 20vw;
+    border: 0.5vmin solid #C0C0C0;
+    font-family: 'RussoOne';
+    padding-left: 2vmin;
+    font-size: 2vmin;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+    width: 20vw;
+    background-color: #FF5F1F;
+    border: 0.5vmin solid #C0C0C0;
+
+}
+
+.button button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent; /* Make button background transparent */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Ensure the cursor changes on hover */
+}
+
+.button h1{
+    text-align: center;
+    font-family: 'Orbitron';
+    font-weight: 100;
+    font-size: 3vmin;
+    color: #C0C0C0;
+}
+
+.center-box {
+    display: flex;     
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* Home Page */
+
+.main_home {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    width: 100vw;
+    height: 100vh; 
+    margin-top: 10vh;  
+}
+
+.boxes {
+    display: flex;
+    flex-direction: row-reverse;           
+    height: 50vh;
+    width: 60vw;
+    background-color: rgba(16, 24, 32, 0.85);
+}
+
+.boxes h1 {
+    justify-content: space-between;
+    margin: 1vmin;
+    font-family: 'RussoOne';
+    color: #C0C0C0;
+    background-color: rgba(16, 24, 32, 0.85);
+    border: 0.5vh solid rgba(192, 192, 192);
+    font-size: 3vmin;
+}
