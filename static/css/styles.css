@@ -13,7 +13,7 @@ RGB: rgb(16, 24, 32)
 
 Chrome Silver
 Hex: #C0C0C0
-RGB: rgb(192, 192, 192)
+RGB: rgba(192, 192, 192)
 
 Electric Yellow
 Hex: #FFFF33
@@ -23,6 +23,8 @@ Orange
 Hex: #FF5F1F
 RGB: rgb(255, 95, 31)
 */
+
+/* FONTS */
 
 @font-face{
     font-family: Audiowide;
@@ -37,11 +39,24 @@ RGB: rgb(255, 95, 31)
     color: #C0C0C0;
 }
 
+
+@font-face{
+    font-family: Orbitron;
+    src:url(Orbitron-VariableFont_wght.ttf);
+    color: #C0C0C0;
+}
+
+
+
+/* GLOBAL SETTINGS */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+/* TOPBAR */
 
 .top-bar {
     background-color: #101820;
@@ -50,9 +65,10 @@ RGB: rgb(255, 95, 31)
     justify-content: space-between;
     border: 0.25vw solid #FF5F1F;
     overflow: hidden;
-
+    align-items: center;
 }
 
+/* DROPDOWN MENU */
 
 .dropdown button{
     display: flex;
@@ -66,6 +82,7 @@ RGB: rgb(255, 95, 31)
     cursor: pointer;
     width: 20vw;
     height: 10vh;
+    font-size: 4vmin;
 }
 
 .dropdown a{
@@ -78,8 +95,8 @@ RGB: rgb(255, 95, 31)
     border-bottom: 0.25vw solid #FF5F1F;
     border-left: 0.25vw solid #FF5F1F;
     width: 100%;
-    padding: 9.5vh;
-    
+    padding: 8.5vh;
+    font-size: 4vmin;
 }
 
 .dropdown .content{
@@ -99,19 +116,27 @@ RGB: rgb(255, 95, 31)
     display: block;
 }
 
+/* LOGO BOX */
 
 .LAB473 {
-    font-family: 'Audiowide';
-    display: flex;           
+    display: flex;    
     justify-content: center;
-    align-items: center;
+    align-items: center;       
     background-color: #8A2BE2;
     color: #C0C0C0;
     border: 0.4vh solid #C0C0C0;
     width: 10vw;
     height: 5vh;
-    margin-top: 2.3vh;
-    margin-right: 1vw;
+    border-radius: 1vmin;
+    margin: auto 2.5vw auto auto;
+}
+
+.LAB473 h2 {
+    font-family: 'Audiowide';
+    font-size: 2vmin;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
 }
 
 
@@ -131,17 +156,6 @@ body {
     overflow-y: hidden;
     /* overflow: hidden */
 }
-
-
-
-/* ???? */
-.titles {
-    color: azure;
-    background-color: aqua;
-    justify-content: center;
-}
-
-
 
 /* Project page */
 
@@ -172,10 +186,11 @@ body {
     font-family: 'Audiowide';
     color: #C0C0C0;
     background-color: rgba(16, 24, 32, 0.85);
-    border: 1vh solid yellow;
+    border: 1vh solid rgba(255, 255, 51);
     margin: 10px 0;
     width: 20vw;
     height: 50vh;
+    
 }
 
 /* Here goes login page styling */
@@ -183,40 +198,89 @@ body {
 
 
 .login-block{   
-    display: flex;     
+    display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     width: 100vw;
-    height: 80vh;
 }
 
 .fields{
     display: block;
-    color: black;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
 }
 
 .fields form{
-    color: gray;
-    background-color: orange;
-    margin: 1vh;
+    color: #C0C0C0;
+    background-color: #101820;
+    margin: 0.5vh;
+    width: 20vw;
+    border: 0.5vmin solid #C0C0C0;
+    font-family: 'RussoOne';
+    padding-left: 2vmin;
+    font-size: 2vmin;
 }
 
 .button {
     display: flex;
-    color: orange;
-    background-color: black;
-    width: fill;
-    height: fill;
     align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+    width: 20vw;
+    background-color: #FF5F1F;
+    border: 0.5vmin solid #C0C0C0;
+
+}
+
+.button button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent; /* Make button background transparent */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Ensure the cursor changes on hover */
+}
+
+.button h1{
+    text-align: center;
+    font-family: 'Orbitron';
+    font-weight: 100;
+    font-size: 3vmin;
+    color: #C0C0C0;
 }
 
 .center-box {
     display: flex;     
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background-color: #8A2BE2;
-    border: 2px solid #C0C0C0;
+}
+
+
+
+/* Home Page */
+
+.main_home {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    width: 100vw;
+    height: 100vh; 
+    margin-top: 10vh;  
+}
+
+.boxes {
+    display: flex;
+    flex-direction: row-reverse;           
+    border: 0.5vh solid rgba(255, 255, 51);
+    height: 50vh;
+    width: 60vw;
+    background-color: rgba(16, 24, 32, 0.85);
+}
+
+.boxes h1 {
+    justify-content: space-between;
+    margin: 1vmin;
+    font-family: 'RussoOne';
+    color: #C0C0C0;
+    background-color: rgba(16, 24, 32, 0.85);
+    border: 0.5vh solid rgba(192, 192, 192);
+    font-size: 3vmin;
 }
