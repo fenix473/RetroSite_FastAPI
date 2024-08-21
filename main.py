@@ -62,3 +62,4 @@ async def projects(request: Request):
     except Exception as e:
         print(f"Error rendering template: {e}")
         return {"error": str(e)}
+    
